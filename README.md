@@ -3,11 +3,17 @@ The GPU RAM Estimator provides a simple tool for estimating GPU memory occupatio
 ## Estimator
 ### Params define
 a number of attention heads 
+
 p pipeline parallel size 
+
 b microbatch sizes sequence length 
+
 h hidden dimension size
+
 t tensor parallel size 
+
 L number of transformer layers 
+
 v vocabulary size
 ### Usage
 ```python
