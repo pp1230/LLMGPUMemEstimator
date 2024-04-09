@@ -1,5 +1,5 @@
 # LLMGPUMemEstimator
-The GPU RAM Estimator provides a simple tool for estimating GPU memory occupation during training and inference.
+The GPU RAM Estimator provides a simple tool for estimating GPU memory occupation during training and inference. This tool is suitable for GPT-type models based on transformers.
 ## Estimator
 ### Params define
 a number of attention heads 
