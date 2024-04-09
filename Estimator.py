@@ -21,7 +21,7 @@ class Estimator():
         self.t=t
         self.v=v 
         self.L=L
-    def estimator_gpu_memory(self, **params):
+    def estimate_gpu_memory_training(self, **params):
         if 'b' in params:
             b=params['b']
         else:
@@ -53,5 +53,15 @@ class Estimator():
         total_memory=model_memory+activation_memory+buffer_memory
         gb=1024**3
         return total_memory/gb, model_memory/gb, activation_memory/gb, buffer_memory/gb
-
+    
+    """
+    :precision: 2 for 16-bit, 4 for 32-bit
+    """
+    def estimate_gpu_memory_inference(self, **params):
+        if 'precision' in params:
+            precision=params['precision']
+        else:
+            precision=2
+        gb=1024**3
+        return precision*self.model_params/gb
 
